@@ -1,2 +1,2 @@
-# Python_ETL_SEIA_Store
+# Business_Intelligence_Project_SEIA_Store
 IF5100 - Database Administration Project
