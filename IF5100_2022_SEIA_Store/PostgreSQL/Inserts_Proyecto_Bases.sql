@@ -1,23 +1,3 @@
-SELECT * FROM customers.tb_city;
-
-insert into customers.tb_city (city_name) values ('Cartago');
-insert into customers.tb_city (city_name) values ('San José');
-insert into customers.tb_city (city_name) values ('Heredia');
-insert into customers.tb_city (city_name) values ('Alajuela');
-insert into customers.tb_city (city_name) values ('Guanacaste');
-insert into customers.tb_city (city_name) values ('Limón');
-insert into customers.tb_city (city_name) values ('Puntarenas');
-
-SELECT * FROM customers.tb_address;
-
-insert into customers.tb_address (city_id, details) values (1,'500 metros este de la Basílica, casa número 13');
-insert into customers.tb_address (city_id, details) values (2,'Barrio 13, 230 metros oeste de la pulpería Nano');
-insert into customers.tb_address (city_id, details) values (3,'Avenida 2, 50 metros norte de la escuela San Benito');
-insert into customers.tb_address (city_id, details) values (4,'20 metros sur del parque central, casa número 10, color blanco');
-insert into customers.tb_address (city_id, details) values (5,'Nicoya, frente al Palí de la calle 5');
-insert into customers.tb_address (city_id, details) values (6,'Cahuíta, frente a Hotel Colima, casa color verde');
-insert into customers.tb_address (city_id, details) values (7,'100 metros sur del parque nacional Fauna, avenida 3');
-
 SELECT * FROM customers.tb_client;
 
 insert into customers.tb_client (client_name, client_last_name) values ('Isabel', 'Portuguez');
@@ -27,18 +7,6 @@ insert into customers.tb_client (client_name, client_last_name) values ('Adrián
 insert into customers.tb_client (client_name, client_last_name) values ('Jose', 'López');
 insert into customers.tb_client (client_name, client_last_name) values ('Saymond', 'Pérez');
 insert into customers.tb_client (client_name, client_last_name) values ('Alberto', 'Luna');
-
-SELECT * FROM customers.tb_client_addresses;
-
-insert into customers.tb_client_addresses (client_id, address_id) values (1, 1);
-insert into customers.tb_client_addresses (client_id, address_id) values (2, 2);
-insert into customers.tb_client_addresses (client_id, address_id) values (3, 3);
-insert into customers.tb_client_addresses (client_id, address_id) values (4, 4);
-insert into customers.tb_client_addresses (client_id, address_id) values (5, 5);
-insert into customers.tb_client_addresses (client_id, address_id) values (6, 6);
-insert into customers.tb_client_addresses (client_id, address_id) values (7, 7);
-
-
 insert into CUSTOMERS.tb_CLIENT (CLIENT_NAME, CLIENT_LAST_NAME) values ('Roley', 'Flawn');
 insert into CUSTOMERS.tb_CLIENT (CLIENT_NAME, CLIENT_LAST_NAME) values ('Ronny', 'Fearnside');
 insert into CUSTOMERS.tb_CLIENT (CLIENT_NAME, CLIENT_LAST_NAME) values ('Thorvald', 'Randlesome');
@@ -549,6 +517,16 @@ insert into CUSTOMERS.tb_CLIENT_CREDIT_CARDS (CLIENT_ID, CREDIT_CARD_ID) values 
 insert into CUSTOMERS.tb_CLIENT_CREDIT_CARDS (CLIENT_ID, CREDIT_CARD_ID) values (61, 99);
 insert into CUSTOMERS.tb_CLIENT_CREDIT_CARDS (CLIENT_ID, CREDIT_CARD_ID) values (21, 100);
 
+
+SELECT * FROM customers.tb_city;
+
+insert into customers.tb_city (city_name) values ('Cartago');
+insert into customers.tb_city (city_name) values ('San José');
+insert into customers.tb_city (city_name) values ('Heredia');
+insert into customers.tb_city (city_name) values ('Alajuela');
+insert into customers.tb_city (city_name) values ('Guanacaste');
+insert into customers.tb_city (city_name) values ('Limón');
+insert into customers.tb_city (city_name) values ('Puntarenas');
 insert into CUSTOMERS.tb_CITY (CITY_NAME) values ('Karis');
 insert into CUSTOMERS.tb_CITY (CITY_NAME) values ('Altanbulag');
 insert into CUSTOMERS.tb_CITY (CITY_NAME) values ('Cairo');
@@ -650,14 +628,15 @@ insert into CUSTOMERS.tb_CITY (CITY_NAME) values ('Três Corações');
 insert into CUSTOMERS.tb_CITY (CITY_NAME) values ('Berlin');
 insert into CUSTOMERS.tb_CITY (CITY_NAME) values ('Guanzhou');
 
+SELECT * FROM customers.tb_address;
 
-insert into CUSTOMERS.tb_ADDRESS (CITY_ID, DETAILS) values (1, '10717 Jenifer Circle');
-insert into CUSTOMERS.tb_ADDRESS (CITY_ID, DETAILS) values (2, '972 Schurz Center');
-insert into CUSTOMERS.tb_ADDRESS (CITY_ID, DETAILS) values (3, '9704 Milwaukee Crossing');
-insert into CUSTOMERS.tb_ADDRESS (CITY_ID, DETAILS) values (4, '143 Lakeland Point');
-insert into CUSTOMERS.tb_ADDRESS (CITY_ID, DETAILS) values (5, '466 Carpenter Hill');
-insert into CUSTOMERS.tb_ADDRESS (CITY_ID, DETAILS) values (6, '48922 Evergreen Road');
-insert into CUSTOMERS.tb_ADDRESS (CITY_ID, DETAILS) values (7, '2 Twin Pines Junction');
+insert into customers.tb_address (city_id, details) values (1,'500 metros este de la Basílica, casa número 13');
+insert into customers.tb_address (city_id, details) values (2,'Barrio 13, 230 metros oeste de la pulpería Nano');
+insert into customers.tb_address (city_id, details) values (3,'Avenida 2, 50 metros norte de la escuela San Benito');
+insert into customers.tb_address (city_id, details) values (4,'20 metros sur del parque central, casa número 10, color blanco');
+insert into customers.tb_address (city_id, details) values (5,'Nicoya, frente al Palí de la calle 5');
+insert into customers.tb_address (city_id, details) values (6,'Cahuíta, frente a Hotel Colima, casa color verde');
+insert into customers.tb_address (city_id, details) values (7,'100 metros sur del parque nacional Fauna, avenida 3');
 insert into CUSTOMERS.tb_ADDRESS (CITY_ID, DETAILS) values (8, '6 Norway Maple Street');
 insert into CUSTOMERS.tb_ADDRESS (CITY_ID, DETAILS) values (9, '1 Homewood Trail');
 insert into CUSTOMERS.tb_ADDRESS (CITY_ID, DETAILS) values (10, '701 Jenna Hill');
@@ -753,13 +732,15 @@ insert into CUSTOMERS.tb_ADDRESS (CITY_ID, DETAILS) values (99, '7588 Old Gate P
 insert into CUSTOMERS.tb_ADDRESS (CITY_ID, DETAILS) values (100, '9232 Kenwood Alley');
 
 
-insert into CUSTOMERS.tb_CLIENT_ADDRESSES (CLIENT_ID, ADDRESS_ID) values (1, 1);
-insert into CUSTOMERS.tb_CLIENT_ADDRESSES (CLIENT_ID, ADDRESS_ID) values (2, 2);
-insert into CUSTOMERS.tb_CLIENT_ADDRESSES (CLIENT_ID, ADDRESS_ID) values (3, 3);
-insert into CUSTOMERS.tb_CLIENT_ADDRESSES (CLIENT_ID, ADDRESS_ID) values (4, 4);
-insert into CUSTOMERS.tb_CLIENT_ADDRESSES (CLIENT_ID, ADDRESS_ID) values (5, 5);
-insert into CUSTOMERS.tb_CLIENT_ADDRESSES (CLIENT_ID, ADDRESS_ID) values (6, 6);
-insert into CUSTOMERS.tb_CLIENT_ADDRESSES (CLIENT_ID, ADDRESS_ID) values (7, 7);
+SELECT * FROM customers.tb_client_addresses;
+
+insert into customers.tb_client_addresses (client_id, address_id) values (1, 1);
+insert into customers.tb_client_addresses (client_id, address_id) values (2, 2);
+insert into customers.tb_client_addresses (client_id, address_id) values (3, 3);
+insert into customers.tb_client_addresses (client_id, address_id) values (4, 4);
+insert into customers.tb_client_addresses (client_id, address_id) values (5, 5);
+insert into customers.tb_client_addresses (client_id, address_id) values (6, 6);
+insert into customers.tb_client_addresses (client_id, address_id) values (7, 7);
 insert into CUSTOMERS.tb_CLIENT_ADDRESSES (CLIENT_ID, ADDRESS_ID) values (8, 8);
 insert into CUSTOMERS.tb_CLIENT_ADDRESSES (CLIENT_ID, ADDRESS_ID) values (9, 9);
 insert into CUSTOMERS.tb_CLIENT_ADDRESSES (CLIENT_ID, ADDRESS_ID) values (10, 10);
@@ -872,8 +853,15 @@ SELECT * FROM sales.tb_payment_method;
 insert into sales.tb_payment_method (payment_method_name) values ('Credit Card');
 insert into sales.tb_payment_method (payment_method_name) values ('Cash');
 
-SELECT * FROM SALES.tb_INVOICE
+SELECT * FROM sales.tb_invoice;
 
+insert into sales.tb_invoice (purchase_date, total_price, currency_id, payment_method_id) values (now(),0,4,2);
+insert into sales.tb_invoice (purchase_date, total_price, currency_id, payment_method_id) values (now(),0,4,2);
+insert into sales.tb_invoice (purchase_date, total_price, currency_id, payment_method_id) values (now(),0,4,2);
+insert into sales.tb_invoice (purchase_date, total_price, currency_id, payment_method_id) values (now(),0,4,2);
+insert into sales.tb_invoice (purchase_date, total_price, currency_id, payment_method_id) values (now(),0,4,2);
+insert into sales.tb_invoice (purchase_date, total_price, currency_id, payment_method_id) values (now(),0,4,2);
+insert into sales.tb_invoice (purchase_date, total_price, currency_id, payment_method_id) values (now(),0,4,2);
 insert into SALES.tb_INVOICE (PURCHASE_DATE, TOTAL_PRICE, CURRENCY_ID, PAYMENT_METHOD_ID) values ('23/12/2022', 434176, 10, 2);
 insert into SALES.tb_INVOICE (PURCHASE_DATE, TOTAL_PRICE, CURRENCY_ID, PAYMENT_METHOD_ID) values ('09/01/2021', 490553, 9, 2);
 insert into SALES.tb_INVOICE (PURCHASE_DATE, TOTAL_PRICE, CURRENCY_ID, PAYMENT_METHOD_ID) values ('26/11/2020', 443443, 2, 2);
@@ -1972,19 +1960,6 @@ insert into stock.tb_product (product_name, product_price) values ('Longos - Gri
 insert into stock.tb_product (product_name, product_price) values ('Tortillas - Flour, 8', 899);
 insert into stock.tb_product (product_name, product_price) values ('Mustard Prepared', 4789);
 
-SELECT * FROM sales.tb_invoice;
-
-alter table sales.tb_invoice_details
-add column subtotal_price numeric(9,3) not null;
-
-insert into sales.tb_invoice (purchase_date, total_price, currency_id, payment_method_id) values (now(),0,4,2);
-insert into sales.tb_invoice (purchase_date, total_price, currency_id, payment_method_id) values (now(),0,4,2);
-insert into sales.tb_invoice (purchase_date, total_price, currency_id, payment_method_id) values (now(),0,4,2);
-insert into sales.tb_invoice (purchase_date, total_price, currency_id, payment_method_id) values (now(),0,4,2);
-insert into sales.tb_invoice (purchase_date, total_price, currency_id, payment_method_id) values (now(),0,4,2);
-insert into sales.tb_invoice (purchase_date, total_price, currency_id, payment_method_id) values (now(),0,4,2);
-insert into sales.tb_invoice (purchase_date, total_price, currency_id, payment_method_id) values (now(),0,4,2);
-
 SELECT * FROM sales.tb_client_invoice;
 
 insert into sales.tb_client_invoice (client_id, invoice_id) values (1, 1);
@@ -1994,21 +1969,6 @@ insert into sales.tb_client_invoice (client_id, invoice_id) values (4, 4);
 insert into sales.tb_client_invoice (client_id, invoice_id) values (5, 5);
 insert into sales.tb_client_invoice (client_id, invoice_id) values (6, 6);
 insert into sales.tb_client_invoice (client_id, invoice_id) values (7, 7);
-
-SELECT * FROM sales.tb_invoice_details;
-
-insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (10, 1, 2, 0);
-insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (11, 2, 3, 0);
-insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (12, 3, 1, 0);
-insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (13, 4, 2, 0);
-insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (14, 5, 4, 0);
-insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (15, 6, 2, 0);
-insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (16, 7, 1, 0);
-insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (17, 1, 2, 0);
-insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (18, 2, 2, 0);
-
-SELECT  * FROM SALES.tb_INVOICE
-
 insert into SALES.tb_CLIENT_INVOICE (CLIENT_ID, INVOICE_ID) values (56, 52);
 insert into SALES.tb_CLIENT_INVOICE (CLIENT_ID, INVOICE_ID) values (68, 12);
 insert into SALES.tb_CLIENT_INVOICE (CLIENT_ID, INVOICE_ID) values (62, 53);
@@ -2110,8 +2070,18 @@ insert into SALES.tb_CLIENT_INVOICE (CLIENT_ID, INVOICE_ID) values (82, 56);
 insert into SALES.tb_CLIENT_INVOICE (CLIENT_ID, INVOICE_ID) values (35, 11);
 insert into SALES.tb_CLIENT_INVOICE (CLIENT_ID, INVOICE_ID) values (61, 81);
 
-SELECT * FROM STOCK.tb_PRODUCT
 
+SELECT * FROM sales.tb_invoice_details;
+
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (10, 1, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (11, 2, 3, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (12, 3, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (13, 4, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (14, 5, 4, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (15, 6, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (16, 7, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (17, 1, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (18, 2, 2, 0);
 insert into SALES.tb_INVOICE_DETAILS (PRODUCT_ID, INVOICE_ID, PRODUCT_AMOUNT, subtotal_price) values (85, 29, 1, 6460);
 insert into SALES.tb_INVOICE_DETAILS (PRODUCT_ID, INVOICE_ID, PRODUCT_AMOUNT, subtotal_price) values (71, 55, 16, 53575);
 insert into SALES.tb_INVOICE_DETAILS (PRODUCT_ID, INVOICE_ID, PRODUCT_AMOUNT, subtotal_price) values (86, 46, 6, 6862);
