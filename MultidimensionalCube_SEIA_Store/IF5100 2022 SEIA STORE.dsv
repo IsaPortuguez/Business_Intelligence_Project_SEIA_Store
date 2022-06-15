@@ -1,0 +1,167 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4f17959f-ec98-43ea-9271-56f558d3ce52" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>IF5100 2022 SEIA STORE</ID>
+  <Name>IF5100 2022 SEIA STORE</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>IF5100 2022 SEIA STORE</DataSourceID>
+  <Schema>
+    <xs:schema id="IF5100_x0020_2022_x0020_SEIA_x0020_STORE" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="IF5100_x0020_2022_x0020_SEIA_x0020_STORE" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="71efb731-d5e9-4a49-b8c2-00af0857f9f8">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_sysdiagrams" msprop:DbTableName="sysdiagrams" msprop:FriendlyName="sysdiagrams" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="8af4663d-294a-40ea-a877-f437b5eae607">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="name" msprop:FriendlyName="name" msprop:DbColumnName="name" msprop:design-time-name="496f5851-7016-419b-95e7-1209086aabc4">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="128" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="principal_id" msprop:FriendlyName="principal_id" msprop:DbColumnName="principal_id" msprop:design-time-name="99764ee6-4e76-4669-bee9-66c2ddf09d0f" type="xs:int" />
+                  <xs:element name="diagram_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="diagram_id" msprop:DbColumnName="diagram_id" msprop:design-time-name="d7286f27-c997-46c7-abf5-456c75d50328" type="xs:int" />
+                  <xs:element name="version" msprop:FriendlyName="version" msprop:DbColumnName="version" msprop:design-time-name="9ed5f065-64c6-495b-b77c-718d16c1ebd0" type="xs:int" minOccurs="0" />
+                  <xs:element name="definition" msprop:DataSize="0" msprop:FriendlyName="definition" msprop:DbColumnName="definition" msprop:design-time-name="bd95d2f0-cfd7-4ee2-90e4-3d49a65cc12f" type="xs:base64Binary" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="SALES_tb_DIM_INVOICE_DATE" msprop:DbTableName="tb_DIM_INVOICE_DATE" msprop:FriendlyName="tb_DIM_INVOICE_DATE" msprop:TableType="Table" msprop:DbSchemaName="SALES" msprop:design-time-name="43ed4ddb-54fe-4a66-8a91-ba1e1deeb0b7">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="INVOICE_PURCHASE_DATE_ID" msprop:FriendlyName="INVOICE_PURCHASE_DATE_ID" msprop:DbColumnName="INVOICE_PURCHASE_DATE_ID" msprop:design-time-name="3753273c-0f78-4a1c-a9e0-bdab76a7c454" type="xs:int" />
+                  <xs:element name="PURCHASE_DATE" msprop:FriendlyName="PURCHASE_DATE" msprop:DbColumnName="PURCHASE_DATE" msprop:design-time-name="2e7a9a98-f5e7-4465-ae3e-bd6e715f4e5b" type="xs:dateTime" />
+                  <xs:element name="PURCHASE_YEAR" msprop:FriendlyName="PURCHASE_YEAR" msprop:DbColumnName="PURCHASE_YEAR" msprop:design-time-name="6795ab9e-7feb-4ee4-bfde-f1e9923386ba">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PURCHASE_MONTH" msprop:FriendlyName="PURCHASE_MONTH" msprop:DbColumnName="PURCHASE_MONTH" msprop:design-time-name="8b02b6ab-6b2a-4639-bc56-5b29b7ac7854">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="SALES_tb_DIM_PAYMENT_METHOD" msprop:DbTableName="tb_DIM_PAYMENT_METHOD" msprop:FriendlyName="tb_DIM_PAYMENT_METHOD" msprop:TableType="Table" msprop:DbSchemaName="SALES" msprop:design-time-name="fbfa05ba-176e-4972-ada3-c3dceb46e7cd">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PAYMENT_METHOD_ID" msprop:FriendlyName="PAYMENT_METHOD_ID" msprop:DbColumnName="PAYMENT_METHOD_ID" msprop:design-time-name="67d4d4ca-f14f-4e61-b738-89b7fad9e284" type="xs:int" />
+                  <xs:element name="PAYMENT_METHOD" msprop:FriendlyName="PAYMENT_METHOD" msprop:DbColumnName="PAYMENT_METHOD" msprop:design-time-name="203efba1-a26e-4ce3-87ba-dafb5ad4cbe2">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="25" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="SALES_tb_FACT_TABLE_INVOICE" msprop:DbTableName="tb_FACT_TABLE_INVOICE" msprop:FriendlyName="tb_FACT_TABLE_INVOICE" msprop:TableType="Table" msprop:DbSchemaName="SALES" msprop:design-time-name="36458798-cc0d-41e6-9240-8133890e12a5">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="FACT_TABLE_INVOICE_ID" msprop:FriendlyName="FACT_TABLE_INVOICE_ID" msprop:DbColumnName="FACT_TABLE_INVOICE_ID" msprop:design-time-name="bd69a8aa-9742-4f1f-8b40-4a6504c9b2a3" type="xs:int" />
+                  <xs:element name="INVOICE_PURCHASE_DATE_ID" msprop:FriendlyName="INVOICE_PURCHASE_DATE_ID" msprop:DbColumnName="INVOICE_PURCHASE_DATE_ID" msprop:design-time-name="36ae0cc4-dcd8-4334-8bc5-ea54ef09730c" type="xs:int" />
+                  <xs:element name="PAYMENT_METHOD_ID" msprop:FriendlyName="PAYMENT_METHOD_ID" msprop:DbColumnName="PAYMENT_METHOD_ID" msprop:design-time-name="033c13cd-8a15-460e-a4b3-931177e160ff" type="xs:int" />
+                  <xs:element name="PRODUCT_ID" msprop:FriendlyName="PRODUCT_ID" msprop:DbColumnName="PRODUCT_ID" msprop:design-time-name="f9f7ebd1-a95b-478c-b893-5c890bde6173" type="xs:int" />
+                  <xs:element name="PRODUCT_AMOUNT" msprop:FriendlyName="PRODUCT_AMOUNT" msprop:DbColumnName="PRODUCT_AMOUNT" msprop:design-time-name="97e6c732-23f8-47bb-8074-0e7355c64e92" type="xs:int" />
+                  <xs:element name="SUBTOTAL_PRICE" msprop:FriendlyName="SUBTOTAL_PRICE" msprop:DbColumnName="SUBTOTAL_PRICE" msprop:design-time-name="b0c68c53-a01d-4876-9742-0019c4e786aa" type="xs:decimal" />
+                  <xs:element name="TOTAL_PRICE" msprop:FriendlyName="TOTAL_PRICE" msprop:DbColumnName="TOTAL_PRICE" msprop:design-time-name="824beb0e-0e3b-463f-bfcc-5a8ff74ca1e1" type="xs:decimal" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="STOCK_tb_DIM_PRODUCT" msprop:DbTableName="tb_DIM_PRODUCT" msprop:FriendlyName="tb_DIM_PRODUCT" msprop:TableType="Table" msprop:DbSchemaName="STOCK" msprop:design-time-name="3c230f78-e1fb-454e-8698-a2a7b53f88c8">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PRODUCT_ID" msprop:FriendlyName="PRODUCT_ID" msprop:DbColumnName="PRODUCT_ID" msprop:design-time-name="d373a718-fa43-487e-96e9-4fb40fce4cf6" type="xs:int" />
+                  <xs:element name="PRODUCT_NAME" msprop:FriendlyName="PRODUCT_NAME" msprop:DbColumnName="PRODUCT_NAME" msprop:design-time-name="fbb57fdd-b212-4b04-a21a-2d73a2d77800">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRODUCT_PRICE" msprop:FriendlyName="PRODUCT_PRICE" msprop:DbColumnName="PRODUCT_PRICE" msprop:design-time-name="cb951727-8303-4d96-8729-308aa7efa719" type="xs:decimal" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_sysdiagrams" />
+          <xs:field xpath="diagram_id" />
+        </xs:unique>
+        <xs:unique name="SALES_tb_DIM_INVOICE_DATE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//SALES_tb_DIM_INVOICE_DATE" />
+          <xs:field xpath="INVOICE_PURCHASE_DATE_ID" />
+        </xs:unique>
+        <xs:unique name="SALES_tb_DIM_PAYMENT_METHOD_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//SALES_tb_DIM_PAYMENT_METHOD" />
+          <xs:field xpath="PAYMENT_METHOD_ID" />
+        </xs:unique>
+        <xs:unique name="SALES_tb_FACT_TABLE_INVOICE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//SALES_tb_FACT_TABLE_INVOICE" />
+          <xs:field xpath="FACT_TABLE_INVOICE_ID" />
+        </xs:unique>
+        <xs:unique name="STOCK_tb_DIM_PRODUCT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//STOCK_tb_DIM_PRODUCT" />
+          <xs:field xpath="PRODUCT_ID" />
+        </xs:unique>
+        <xs:keyref name="FK_PAYMENT_METHOD_ID" refer="SALES_tb_DIM_PAYMENT_METHOD_Constraint1">
+          <xs:selector xpath=".//SALES_tb_FACT_TABLE_INVOICE" />
+          <xs:field xpath="PAYMENT_METHOD_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK_INVOICE_PURCHASE_DATE_ID" refer="SALES_tb_DIM_INVOICE_DATE_Constraint1">
+          <xs:selector xpath=".//SALES_tb_FACT_TABLE_INVOICE" />
+          <xs:field xpath="INVOICE_PURCHASE_DATE_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK_PRODUCT_ID" refer="STOCK_tb_DIM_PRODUCT_Constraint1">
+          <xs:selector xpath=".//SALES_tb_FACT_TABLE_INVOICE" />
+          <xs:field xpath="PRODUCT_ID" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <IF5100_x0020_2022_x0020_SEIA_x0020_STORE xmlns="" />
+  </Schema>
+</DataSourceView>

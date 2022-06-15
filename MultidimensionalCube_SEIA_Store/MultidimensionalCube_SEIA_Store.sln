@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "MultidimensionalCube_SEIA_Store", "MultidimensionalCube_SEIA_Store.dwproj", "{EDA3B93F-663B-4017-B14A-7D8C4AFFF0B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDA3B93F-663B-4017-B14A-7D8C4AFFF0B8}.Development|Default.ActiveCfg = Development
+		{EDA3B93F-663B-4017-B14A-7D8C4AFFF0B8}.Development|Default.Build.0 = Development
+		{EDA3B93F-663B-4017-B14A-7D8C4AFFF0B8}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A017BFF-B8B7-4D8D-9D41-AA3C3CD0F299}
+	EndGlobalSection
+EndGlobal
