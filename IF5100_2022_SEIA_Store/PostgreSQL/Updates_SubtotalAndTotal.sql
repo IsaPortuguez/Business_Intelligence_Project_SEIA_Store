@@ -14,4 +14,5 @@ UPDATE sales.tb_invoice
 SET total_price = (subquery.total)
 FROM (select sales.tb_invoice_details.invoice_id, sum( sales.tb_invoice_details.subtotal_price) as total from sales.tb_invoice join sales.tb_invoice_details on sales.tb_invoice_details.invoice_id = sales.tb_invoice.invoice_id group by sales.tb_invoice_details.invoice_id) 
 AS subquery WHERE sales.tb_invoice.invoice_id = subquery.invoice_id 
-L_DEPOSIT].[tb_CURRENCY]
+
+select * from sales.tb_payment_method

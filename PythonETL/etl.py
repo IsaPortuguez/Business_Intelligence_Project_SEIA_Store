@@ -3,6 +3,13 @@ from datetime import datetime
 import psycopg2
 import pyodbc
 
+def connectToLocalPosgreSQL():
+    return psycopg2.connect(
+        host=config('POSGRESQL_HOST_LOCAL'),
+        user=config('POSGRESQL_USER_LOCAL'),
+        password=config('POSGRESQL_PASS_LOCAL'),
+        database=config('POSGRESQL_DATABASE_LOCAL')
+    )
 
 def connectToLocalSQLServer():
     return pyodbc.connect(
@@ -99,7 +106,7 @@ def loadtbDIMFactTableInvoice(cursorSQLServer, factsinvoice):
 
 
 try:
-    connectionPostgreSQL = connectToPosgreSQL()
+    connectionPostgreSQL = connectToLocalPosgreSQL()
     print('Connection successfully to PosgreSQL')
     with connectionPostgreSQL.cursor() as cursorPosgreSQL:
         print(

@@ -2071,7 +2071,12 @@ insert into SALES.tb_CLIENT_INVOICE (CLIENT_ID, INVOICE_ID) values (35, 11);
 insert into SALES.tb_CLIENT_INVOICE (CLIENT_ID, INVOICE_ID) values (61, 81);
 
 
-SELECT * FROM sales.tb_invoice_details;
+SELECT i.invoice_id, ind.invoice_id FROM sales.tb_invoice_details ind
+inner join sales.tb_invoice i
+on ind.invoice_id = i.invoice_id
+group by i.invoice_id, ind.invoice_id
+order by i.invoice_id asc;
+
 
 insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (10, 1, 2, 0);
 insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (11, 2, 3, 0);
@@ -2182,3 +2187,107 @@ insert into SALES.tb_INVOICE_DETAILS (PRODUCT_ID, INVOICE_ID, PRODUCT_AMOUNT, su
 insert into SALES.tb_INVOICE_DETAILS (PRODUCT_ID, INVOICE_ID, PRODUCT_AMOUNT, subtotal_price) values (71, 95, 15, 58521);
 insert into SALES.tb_INVOICE_DETAILS (PRODUCT_ID, INVOICE_ID, PRODUCT_AMOUNT, subtotal_price) values (14, 41, 14, 53825);
 insert into SALES.tb_INVOICE_DETAILS (PRODUCT_ID, INVOICE_ID, PRODUCT_AMOUNT, subtotal_price) values (36, 107, 8, 55255);
+
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (10, 8, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (11, 8, 3, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (12, 10, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (13, 10, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (14, 10, 4, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (15, 11, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (16, 12, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (17, 11, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (18, 12, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (10, 18, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (11, 18, 3, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (12, 18, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (13, 16, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (14, 17, 4, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (15, 16, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (16, 17, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (17, 19, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (18, 19, 2, 0);
+
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (20, 23, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (21, 22, 3, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (22, 20, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (23, 25, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (24, 20, 4, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (25, 22, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (26, 23, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (27, 25, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (28, 20, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (20, 28, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (21, 32, 3, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (22, 34, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (23, 36, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (24, 38, 4, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (25, 28, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (26, 34, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (27, 36, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (28, 32, 2, 0);
+
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (30, 38, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (31, 48, 3, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (32, 45, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (33, 48, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (34, 45, 4, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (35, 51, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (36, 52, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (37, 53, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (38, 51, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (30, 52, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (31, 51, 3, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (32, 53, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (33, 56, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (34, 58, 4, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (35, 59, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (36, 53, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (37, 56, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (38, 58, 2, 0);
+
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (80, 61, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (81, 61, 3, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (82, 64, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (83, 65, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (84, 64, 4, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (85, 59, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (86, 65, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (87, 66, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (88, 66, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (80, 73, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (81, 78, 3, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (82, 73, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (83, 78, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (84, 78, 4, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (85, 85, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (86, 85, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (87, 86, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (88, 86, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (80, 87, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (81, 96, 3, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (82, 91, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (83, 97, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (84, 87, 4, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (85, 91, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (86, 96, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (87, 97, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (88, 87, 2, 0);
+
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (90, 98, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (91, 98, 3, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (92, 98, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (93, 99, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (94, 99, 4, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (95, 99, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (96, 101, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (97, 102, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (98, 101, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (90, 102, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (91, 105, 3, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (92, 104, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (93, 103, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (94, 103, 4, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (95, 104, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (96, 106, 1, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (97, 105, 2, 0);
+insert into sales.tb_invoice_details (product_id, invoice_id, product_amount, subtotal_price) values (98, 106, 2, 0);
